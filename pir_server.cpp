@@ -122,8 +122,7 @@ void PIRServer::set_database(const std::unique_ptr<const std::uint8_t[]> &bytes,
     set_database(move(result));
 }
 
-void PIRServer::set_galois_key(std::uint32_t client_id, seal::GaloisKeys galkey) {
-    galkey.parms_id() = context_->first_parms_id();
+void PIRServer::set_galois_key(std::uint32_t client_id, const seal::GaloisKeys &galkey) {
     galoisKeys_[client_id] = galkey;
 }
 

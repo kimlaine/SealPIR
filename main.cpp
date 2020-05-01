@@ -16,10 +16,10 @@ int main(int argc, char *argv[]) {
 
     uint64_t number_of_items = 1 << 12;
     uint64_t size_per_item = 288; // in bytes
-    uint32_t N = 2048;
+    uint32_t N = 4096;
 
     // Recommended values: (logt, d) = (12, 2) or (8, 1). 
-    uint32_t logt = 12; 
+    uint32_t logt = 16;
     uint32_t d = 2;
 
     EncryptionParameters params(scheme_type::BFV);

@@ -4,6 +4,7 @@
 #include <map>
 #include <memory>
 #include <vector>
+#include <seal/seal.h>
 #include "pir_client.hpp"
 
 class PIRServer {
@@ -21,7 +22,7 @@ class PIRServer {
 
     PirReply generate_reply(PirQuery query, std::uint32_t client_id);
 
-    void set_galois_key(std::uint32_t client_id, seal::GaloisKeys galkey);
+    void set_galois_key(std::uint32_t client_id, const seal::GaloisKeys &galkey);
 
   private:
     std::shared_ptr<seal::SEALContext> context_;
